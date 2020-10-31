@@ -16,6 +16,7 @@ while True:
     )
 
     for i in range (40, 61):
+        print("Current wipre value = %f" % i)
         device.setVoltage(i)
 
         time.sleep(10)
