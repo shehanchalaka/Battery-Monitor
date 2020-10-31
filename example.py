@@ -1,3 +1,4 @@
+import time
 import battery_monitor
 
 device = battery_monitor.Device()
