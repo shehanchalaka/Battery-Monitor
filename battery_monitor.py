@@ -10,7 +10,7 @@ class Device:
     """
     def __init__(self):
         self.i2c = board.I2C()
-        self.ina260 = adafruit_ina260.INA260(self.i2c)
+        self.ina260 = adafruit_ina260.INA260(self.i2c, 0x41) # important! to change to 0x41
         self.si7021 = adafruit_si7021.SI7021(self.i2c)
         self.ds3502 = adafruit_ds3502.DS3502(self.i2c)
 
