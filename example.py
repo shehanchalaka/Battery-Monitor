@@ -17,7 +17,7 @@ while True:
 
     for i in range (3, 4.5, 0.1):
         print("Current loop value = %f" % i)
-        device.setVoltage(i/10)
+        device.setVoltage(i)
 
         time.sleep(10)
 
