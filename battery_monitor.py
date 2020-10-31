@@ -26,7 +26,9 @@ class Device:
         return self.ina260.power
 
     def setVoltage(self, _voltage):
-        _wiper = _voltage
+        _limit = max(0, min(4.2, _voltage))
+        _wiper = (_limit + 0.035) / 0.077
+        print("Setting voltage to %.2f V Wiper %d" % (_limit, _wiper))
         self.ds3502.wiper = _wiper
 
     def readTemperature(self):

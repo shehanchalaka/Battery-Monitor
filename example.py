@@ -15,9 +15,9 @@ while True:
         % (voltage, current, power, temperature, humidity)
     )
 
-    for i in range (40, 61):
-        print("Current wipre value = %f" % i)
-        device.setVoltage(i)
+    for i in range (30, 45):
+        print("Current loop value = %f" % i)
+        device.setVoltage(i/10)
 
         time.sleep(10)
 
