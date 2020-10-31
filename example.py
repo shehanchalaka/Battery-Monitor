@@ -15,6 +15,6 @@ while True:
         % (voltage, current, power, temperature, humidity)
     )
 
-    device.appendFile("./test.txt", "Temperature = {} Humidity = {}".format(voltage, current))
+    device.appendFile("./test.txt", "Temperature = {} Humidity = {}\n".format(voltage, current))
 
-    time.sleep(1)
+    time.sleep(0.1)
