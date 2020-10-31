@@ -15,7 +15,7 @@ while True:
         % (voltage, current, power, temperature, humidity)
     )
 
-    for i in range (30, 45):
+    for i in range (3, 4.5, 0.1):
         print("Current loop value = %f" % i)
         device.setVoltage(i/10)
 
