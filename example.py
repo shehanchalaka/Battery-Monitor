@@ -10,12 +10,10 @@ while True:
     temperature = device.readTemperature()
     humidity = device.readHumidity()
 
-    print(
-        "Current: %.2f mA Voltage: %.2f V Power:%.2f mW\nTemperature: %0.1f C Humidity: %0.1f %%"
-        % (voltage, current, power, temperature, humidity)
-    )
-
     text = "Temperature = {voltage:.2f} Humidity = {current:.2f}\n".format(voltage = voltage, current = current)
+    
+    print(text)
+
     device.appendFile("./test.txt", text)
 
-    time.sleep(0.1)
+    time.sleep(1)
