@@ -3,6 +3,8 @@ import battery_monitor
 
 device = battery_monitor.Device()
 
+device.setVoltage(4.0)
+
 while True:
     voltage = device.readVoltage()
     current = device.readCurrent()
@@ -10,7 +12,7 @@ while True:
     temperature = device.readTemperature()
     humidity = device.readHumidity()
 
-    text = "V {:.3f} Temperature = {:.2f} Humidity = {:.2f}\n".format(voltage, temperature, humidity)
+    text = "V {:.3f} C {:.3f} Temperature = {:.2f} Humidity = {:.2f}\n".format(voltage, current, temperature, humidity)
     
     print(text)
 
