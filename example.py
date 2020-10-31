@@ -10,7 +10,7 @@ while True:
     temperature = device.readTemperature()
     humidity = device.readHumidity()
 
-    text = "Temperature = {voltage:.2f} Humidity = {current:.2f}\n".format(voltage = voltage, current = current)
+    text = "Temperature = {temperature:.2f} Humidity = {humidity:.2f}\n".format(temperature = temperature, humidity = humidity)
     
     print(text)
 
