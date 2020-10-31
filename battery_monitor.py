@@ -29,7 +29,7 @@ class Device:
         _limit = max(0, min(4.2, _voltage))
         _wiper = (_limit + 0.035) / 0.077
         print("Setting voltage to %.2f V Wiper %d" % (_limit, _wiper))
-        self.ds3502.wiper = int(_wiper)
+        self.ds3502.wiper = round(_wiper)
 
     def readTemperature(self):
         return self.si7021.temperature
