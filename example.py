@@ -5,6 +5,6 @@ device = battery_monitor.Device()
 while True:
     voltage = device.readVoltage()
 
-    print("Voltage: %.2f V" % ina260.voltage)
-    
+    print("Voltage: %.2f V" % voltage)
+
     time.sleep(1)
