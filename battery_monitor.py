@@ -36,3 +36,7 @@ class Device:
 
     def readHumidity(self):
         return self.si7021.relative_humidity
+
+    def appendFile(self, _path, _text):
+        with open(_path, "a") as f:
+            f.write(_text)

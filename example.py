@@ -15,23 +15,6 @@ while True:
         % (voltage, current, power, temperature, humidity)
     )
 
-    # for i in range (3, 4.5, 0.1):
-    #     print("Current loop value = %f" % i)
-    #     device.setVoltage(i)
+    device.appendFile("Temperature = {} Humidity = {}".format(voltage, current))
 
-    #     time.sleep(10)
-
-    device.setVoltage(3.5)
-    time.sleep(10)
-
-    device.setVoltage(4.2)
-    time.sleep(10)
-
-    device.setVoltage(3.85)
-    time.sleep(10)
-
-    device.setVoltage(3.98)
-    time.sleep(10)
-
-    device.setVoltage(4.05)
-    time.sleep(10)
+    time.sleep(1)
